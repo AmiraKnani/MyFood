@@ -1,12 +1,12 @@
 server:
-  port: 8025
+  port: 8029
 spring:
   application:
-    name: order-service
+    name: restaurant-service
   config:
     import: "optional:configserver:http://localhost:8058"
   datasource:
-    url: jdbc:mysql://localhost:3306/dborder
+    url: jdbc:mysql://localhost:3306/dbrestaurant
     username: octopus #root
     password: Test123 #1234
     driver-class-name: com.mysql.cj.jdbc.Driver
