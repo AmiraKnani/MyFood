@@ -1,0 +1,25 @@
+server:
+  port: 8025
+spring:
+  application:
+    name: order-service
+  config:
+    import: "optional:configserver:http://localhost:8058"
+  datasource:
+    url: jdbc:mysql://localhost:3306/dborder
+    username: root
+    password: 1234
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    show-sql: true
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    registerWithEureka: true
+    fetchRegistry: true
+    serviceUrl:
+      defaultZone: http://${eureka.instance.hostname}:8761/eureka/
