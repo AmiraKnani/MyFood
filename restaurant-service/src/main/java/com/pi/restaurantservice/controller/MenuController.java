@@ -29,6 +29,12 @@ public class MenuController {
         return ResponseEntity.ok(menus);
     }
 
+    @GetMapping("/{nom}")
+    public ResponseEntity<List<Menu>> getMenusByNom(@PathVariable String nom) {
+        List<Menu> menus = menuRepository.findByNom(nom);
+        return ResponseEntity.ok(menus);
+    }
+
     @PostMapping
     public ResponseEntity<Menu> createMenu(Menu menu) {
         Menu savedMenu = menuRepository.save(menu);

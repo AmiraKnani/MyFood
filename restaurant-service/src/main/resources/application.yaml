@@ -1,5 +1,5 @@
 server:
-  port: 8029
+  port: 8028
 spring:
   application:
     name: restaurant-service
