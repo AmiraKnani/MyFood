@@ -7,8 +7,8 @@ spring:
     import: "optional:configserver:http://localhost:8058"
   datasource:
     url: jdbc:mysql://localhost:3306/dbcourtier
-    username: root
-    password: 1234
+    username: octopus #root
+    password: Test123 #1234
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
@@ -18,7 +18,6 @@ spring:
     serialization:
       fail-on-empty-beans: false
 
-
 eureka:
   instance:
     hostname: localhost
@@ -27,7 +26,3 @@ eureka:
     fetchRegistry: true
     serviceUrl:
       defaultZone: http://${eureka.instance.hostname}:8761/eureka/
-
-
-
-
