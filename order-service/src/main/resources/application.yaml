@@ -7,8 +7,8 @@ spring:
     import: "optional:configserver:http://localhost:8058"
   datasource:
     url: jdbc:mysql://localhost:3306/dborder
-    username: root
-    password: 1234
+    username: octopus #root
+    password: Test123 #1234
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:

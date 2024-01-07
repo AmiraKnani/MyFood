@@ -1,22 +1,19 @@
 server:
-  port: 8027
+  port: 8028
 spring:
   application:
-    name: courtier-service
+    name: restaurant-service
   config:
     import: "optional:configserver:http://localhost:8058"
   datasource:
-    url: jdbc:mysql://localhost:3306/dbcourtier
+    url: jdbc:mysql://localhost:3306/dbrestaurant
     username: octopus #root
     password: Test123 #1234
     driver-class-name: com.mysql.cj.jdbc.Driver
   jpa:
     hibernate:
-      ddl-auto: none
+      ddl-auto: create-drop
     show-sql: true
-  jackson:
-    serialization:
-      fail-on-empty-beans: false
 
 eureka:
   instance:
